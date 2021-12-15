@@ -1,0 +1,22 @@
+    <main class="container-fluid row m-0">
+        @foreach (var item in ViewBag.Destinos)
+        {
+        <!--Card de viagens-->
+        <section class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <section class="bg-danger m-1 d-flex flex-wrap align-items-center justify-content-center p-2 text-white">
+                <h2>@item</h2>
+                <p class="bg-white p-2 text-dark text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur mollitia ipsum eaque illum esse veritatis suscipit, modi a labore et at beatae maiores
+                    placeat repellendus voluptatem! Consectetur aliquam cumque qui.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Viajar
+                </button>
+            </section>
+        </section>
+        
+       
+        <!--Card de viagens FINAL-->
+        }
+    </main>
+
