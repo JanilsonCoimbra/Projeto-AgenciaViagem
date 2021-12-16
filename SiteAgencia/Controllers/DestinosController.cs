@@ -21,7 +21,7 @@ namespace SiteAgencia.Controllers
         // GET: Destinos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.CadastroDestino.ToListAsync());
+            return View(await _context.Destino.ToListAsync());
         }
 
         // GET: Destinos/Details/5
@@ -32,8 +32,8 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var destinos = await _context.CadastroDestino
-                .FirstOrDefaultAsync(m => m.id_Destino == id);
+            var destinos = await _context.Destino
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (destinos == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace SiteAgencia.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id_Destino,destino,descricao,valor")] Destinos destinos)
+        public async Task<IActionResult> Create([Bind("Id,Destino,Descricao,Valor")] Destinos destinos)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var destinos = await _context.CadastroDestino.FindAsync(id);
+            var destinos = await _context.Destino.FindAsync(id);
             if (destinos == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace SiteAgencia.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id_Destino,destino,descricao,valor")] Destinos destinos)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Destino,Descricao,Valor")] Destinos destinos)
         {
-            if (id != destinos.id_Destino)
+            if (id != destinos.Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace SiteAgencia.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DestinosExists(destinos.id_Destino))
+                    if (!DestinosExists(destinos.Id))
                     {
                         return NotFound();
                     }
@@ -123,8 +123,8 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var destinos = await _context.CadastroDestino
-                .FirstOrDefaultAsync(m => m.id_Destino == id);
+            var destinos = await _context.Destino
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (destinos == null)
             {
                 return NotFound();
@@ -138,15 +138,15 @@ namespace SiteAgencia.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var destinos = await _context.CadastroDestino.FindAsync(id);
-            _context.CadastroDestino.Remove(destinos);
+            var destinos = await _context.Destino.FindAsync(id);
+            _context.Destino.Remove(destinos);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool DestinosExists(int id)
         {
-            return _context.CadastroDestino.Any(e => e.id_Destino == id);
+            return _context.Destino.Any(e => e.Id == id);
         }
     }
 }

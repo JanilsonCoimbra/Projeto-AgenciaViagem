@@ -9,15 +9,15 @@ namespace SiteAgencia.Models
     public class Cliente
     {
         [Key()]
-        public int id_cliente { get; set; }
+        public int Id { get; set; }
         [Required]
-        public string nome { get; set; }
+        public string Nome { get; set; }
         [Required]
-        public string email { get; set; }
-        public string cpf { get; set; }
+        public string Email { get; set; }
+        public string Cpf { get; set; }
         [Required]
-        public string senha { get; set; }
+        public string Senha { get; set; }
 
-        public virtual List<Cliente> cliente { get; set; }
+        public virtual List<Compras> Compras { get; set; }
     }
 }

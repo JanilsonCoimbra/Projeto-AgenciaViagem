@@ -8,28 +8,43 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button asp-action="Create" class="btn btn-primary text-white text-decoration-none">
+        NOVA VENDA
+    </button>
 </p>
-        <main class="container-fluid row m-0">
-            @foreach (var item in Model)
-            {
-
-                <section class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <section class="bg-danger m-1 d-flex flex-wrap align-items-center justify-content-center p-2 text-white">
-                        <h2>@Html.DisplayFor(modelItem => item.destino)</h2>
-                        <p class="bg-white p-2 text-dark text-center">
-                            @Html.DisplayFor(modelItem => item.descricao)
-                        </p>
-                        <!-- Button trigger modal -->
-                        <a asp-action="Edit" asp-route-id="@item.id_Destino">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.id_Destino">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.id_Destino">Delete</a>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Viajar
-                        </button>
-                    </section>
-                </section>
-
-            }
-        </main>
-
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -10,15 +10,15 @@ namespace SiteAgencia.Models
     public class Compras
     {
         [Key()]
-        public int id_compra { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey("Cliente")]
-        public int id_cliente { get; set; }
-        public virtual List<Cliente> cliente {get;set;}
+        public int ClienteId { get; set; }
+        public virtual Cliente cliente {get;set;}
 
         [ForeignKey("Destinos")]
-        public int id_destino { get; set; }
-        public virtual List<Destinos> destino {get;set;}
+        public int DestinoId { get; set; }
+        public virtual Destinos destino {get;set;}
 
     }
 }

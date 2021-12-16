@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\SiteAgencia.csproj": {}
+    "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\SiteAgencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\SiteAgencia.csproj": {
+    "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\SiteAgencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\SiteAgencia.csproj",
+        "projectUniqueName": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\SiteAgencia.csproj",
         "projectName": "SiteAgencia",
-        "projectPath": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\SiteAgencia.csproj",
+        "projectPath": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\SiteAgencia.csproj",
         "packagesPath": "C:\\Users\\Japa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\obj\\",
+        "outputPath": "C:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Japa\\AppData\\Roaming\\NuGet\\NuGet.Config",

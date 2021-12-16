@@ -1,83 +1,59 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/style.css" />
-</head>
-<body>
-    <header>
-        <!--NAVBAR TOPO-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info cor-navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="logo" src="~/img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Destino">Destinos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Promocoes">Promoções</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Contatos">Contatos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onmouseenter="display()">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <!--NAVBAR TOPO FIM-->
-    </header>
-    <section class="opcao d-flex container-fluid bg-danger p-4 col-12 overflow-scroll position-absolute">
-        <!--CARDS-->
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 m-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">São Paulo</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <main role="main" class="pb-3">
-        @RenderBody()
+<html lang="en">
 
-    </main>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid p-0 row d-flex p-3">
+    <header class=" col-3 vh-100">
+        <img src="img/logo.png" alt="Logo do Turista" class="col-12">
+        <nav class="navbar navbar-dark container-fluid">
+            <button class="navbar-toggler bg-danger container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container-fluid">
+                    <span class="navbar-toggler-icon"></span>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
-            </div>
+            </button>
+        </nav>
+
+        <div class="collapsed" id="navbarToggleExternalContent">
+            <div class="bg-white col-12">
+
+                <button asp-action="Compras" class="btn btn-primary text-white col-12 m-1" onclick="pagina1()">Vender</button>
+                <button asp-action="Clientes" class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Clientes</button>
+                <button asp-action="Destinos" class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Destinos</button>
+               <button asp-action="Contatos" class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Contatos</button>
+                <button class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Documentação</button>
+
+</div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="~/js/scripts.js"></script>
+
+
+    </header>
+    <main class="col-9 d-flex flex-column vh-100 mt-5 border border-1">
+        @RenderBody()
+    </main>
+
+    <script>
+        let btn1 = document.querySelector(".text-primary");
+        let sessao = document.querySelector("Object");
+
+        function pagina1() {
+            sessao.setAttribute("data", "/pagina1.html")
+        }
+
+        function pagina2() {
+            sessao.setAttribute("data", "/pagina2.html")
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

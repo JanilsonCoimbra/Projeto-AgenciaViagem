@@ -9,7 +9,8 @@ namespace SiteAgencia.Models
     public class Contato
     {
         [Key()]
-        int id_mensagem { get; set; }
-
+        public int Id { get; set; }
+        public string Email { get; set; }
+        public string Mesagem { get; set; }
     }
 }

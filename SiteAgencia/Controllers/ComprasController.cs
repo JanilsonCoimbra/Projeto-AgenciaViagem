@@ -21,7 +21,8 @@ namespace SiteAgencia.Controllers
         // GET: Compras
         public async Task<IActionResult> Index()
         {
-            return View(await _context.CadastroCompra.ToListAsync());
+            var conectar = _context.Compra.Include(c => c.cliente).Include(c => c.destino);
+            return View(await conectar.ToListAsync());
         }
 
         // GET: Compras/Details/5
@@ -32,8 +33,10 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var compras = await _context.CadastroCompra
-                .FirstOrDefaultAsync(m => m.id_compra == id);
+            var compras = await _context.Compra
+                .Include(c => c.cliente)
+                .Include(c => c.destino)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (compras == null)
             {
                 return NotFound();
@@ -45,6 +48,8 @@ namespace SiteAgencia.Controllers
         // GET: Compras/Create
         public IActionResult Create()
         {
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email");
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino");
             return View();
         }
 
@@ -53,7 +58,7 @@ namespace SiteAgencia.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id_compra,id_cliente,id_destino")] Compras compras)
+        public async Task<IActionResult> Create([Bind("Id,ClienteId,DestinoId")] Compras compras)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +66,8 @@ namespace SiteAgencia.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email", compras.ClienteId);
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino", compras.DestinoId);
             return View(compras);
         }
 
@@ -72,11 +79,13 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var compras = await _context.CadastroCompra.FindAsync(id);
+            var compras = await _context.Compra.FindAsync(id);
             if (compras == null)
             {
                 return NotFound();
             }
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email", compras.ClienteId);
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino", compras.DestinoId);
             return View(compras);
         }
 
@@ -85,9 +94,9 @@ namespace SiteAgencia.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id_compra,id_cliente,id_destino")] Compras compras)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ClienteId,DestinoId")] Compras compras)
         {
-            if (id != compras.id_compra)
+            if (id != compras.Id)
             {
                 return NotFound();
             }
@@ -101,7 +110,7 @@ namespace SiteAgencia.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ComprasExists(compras.id_compra))
+                    if (!ComprasExists(compras.Id))
                     {
                         return NotFound();
                     }
@@ -112,6 +121,8 @@ namespace SiteAgencia.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email", compras.ClienteId);
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino", compras.DestinoId);
             return View(compras);
         }
 
@@ -123,8 +134,10 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var compras = await _context.CadastroCompra
-                .FirstOrDefaultAsync(m => m.id_compra == id);
+            var compras = await _context.Compra
+                .Include(c => c.cliente)
+                .Include(c => c.destino)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (compras == null)
             {
                 return NotFound();
@@ -138,15 +151,15 @@ namespace SiteAgencia.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var compras = await _context.CadastroCompra.FindAsync(id);
-            _context.CadastroCompra.Remove(compras);
+            var compras = await _context.Compra.FindAsync(id);
+            _context.Compra.Remove(compras);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ComprasExists(int id)
         {
-            return _context.CadastroCompra.Any(e => e.id_compra == id);
+            return _context.Compra.Any(e => e.Id == id);
         }
     }
 }

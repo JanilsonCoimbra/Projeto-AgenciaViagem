@@ -12,9 +12,10 @@ namespace SiteAgencia.Models
         {
 
         }
-        public DbSet<Cliente> CadastroCliente { get; set; }
-        public DbSet<Destinos> CadastroDestino { get; set; }
-        public DbSet<Compras> CadastroCompra { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Destinos> Destino { get; set; }
+        public DbSet<Compras> Compra { get; set; }
+        public DbSet<Contato> Contato { get; set; }
 
     }
 }
