@@ -1,0 +1,88 @@
+
+main{
+    display: flex;
+   justify-content: center;
+   height: 100vh;
+}
+main > section{
+    width: 90%;
+    z-index: 1;
+    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+}
+form{
+    text-align: center;
+    width: 20%;
+}
+label{
+    display: block;
+}
+textarea{
+    display: block;
+}
+input{
+    width: 100%;
+}
+.contatos{
+    width: 900px;
+    margin: 0px 30px;
+    text-align: center;
+}
+table{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px; 
+}
+table th{
+    background-color: rgb(253, 224, 185);
+    border-radius: 10px;
+    padding:10px;
+}
+.redes{
+    width: 400px;
+    height: 100%;
+    text-align: center;
+}
+.sociais{
+    width: 100px;
+    height: 270px;
+    overflow: hidden;
+    background-color: rgb(250, 121, 0);
+    display: flex;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+.sociais > a > img{
+    width: 200px;
+    height: 200px;
+    transform: translateX(10px);
+}
+.menu-resdes{
+    display: flex;
+}
+.sociais1:hover{
+    width: 200px;
+}
+.sociais2:hover{
+    width: 200px;
+}
+.sociais3:hover{
+    width: 200px;
+}
+@media(max-width: 700px){
+    main > section{
+        flex-wrap: wrap;
+        margin-top: 200px;
+        justify-content: center;
+    }
+    .sociais{
+        width: auto;
+    }
+    form{
+        margin: 30px 0px;
+        width: auto;
+    }
+}

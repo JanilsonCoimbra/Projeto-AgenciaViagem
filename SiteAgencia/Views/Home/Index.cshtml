@@ -1,44 +1,60 @@
-﻿    <section class="w-100 p-0 p-sm-5">
-      <!--FORMULARIO INICIO-->
-      
-      
-      <form class="form-control form w-25 cor-form-login p-4 col-md-12 m-auto m-sm-0" method="get">
-        @ViewBag.login
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="senha" name="senha">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          Cadastre-se
-        </button>
-      </form>
-      
-      <!--MODAL-->
-      <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--FORMULARIO FIM-->
+﻿@model IEnumerable<SiteAgencia.Models.Destinos>
 
-    </section>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/img carrosel/chapadaDiamantina.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img carrosel/farolBarra.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img carrosel/morroSaoPaulo.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/img carrosel/promocao.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carrouselbtn carousel-control-prev bg-danger" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carrouselbtn carousel-control-next bg-danger" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+<section class="container-fluid vh-100 d-flex flex-wrap position-absolute">
+
+    @foreach (var item in Model)
+    {
+        <!--Card de viagens-->
+        <section class="col-3 ">
+            <section class="bg-white border border-2 m-1 d-flex flex-wrap align-items-center justify-content-center p-2 text-white">
+                <h2 class="text-danger text-center w-100">@Html.DisplayFor(modelItem => item.Destino)</h2>
+                <div class="cards-section overflow-hidden">
+                    <p class="bg-white p-2 text-dark text-center h-100">
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </p>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </div>
+                <!-- Button trigger modal -->
+                <a class="btn m-2 btn-light w-50" asp-action="Details" asp-route-id="@item.Id"> Continuar Lendo</a>
+                <button type="button" class="btn btn-success w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Viajar</button>
+            </section>
+        </section>
+        <!--Card de viagens FINAL-->
+    }
+</section>
+

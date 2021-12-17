@@ -1,35 +1,41 @@
-.cor-navbar{
-    background-color: orangered !important;
+:root {
+    --cor-marron: #611a00;
 }
-.logo{
+
+.cor-navbar {
+    background-color: var(--cor-marron) !important;
+    z-index: 2;
+}
+
+.logo {
     width: 150px;
 }
-.nav-item > .nav-link{
+
+.nav-item > .nav-link {
     font-size: 20px;
     color: white !important;
 }
-.opcao {
-    display: none;
-    visibility: collapse;
-    background-color: orange !important;
-    z-index: 1;
-}
-main{
-    background-image: url("../img/banner.jpg");
-    background-position: center;
-    height: 100vh !important;
-}
-.cor-form-login{
-    background-color: orange !important;
-    border-radius: 30px;
-    border: none;
-    min-width: 300px;
 
-}
-.form-contatos{
+.form-contatos {
     height: 350px;
-
 }
-.form-contatos textarea{
+
+    .form-contatos textarea {
+        height: 50px;
+    }
+
+.carousel {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+.carrouselbtn {
     height: 50px;
+}
+
+.cards-section {
+    height: 100px;
 }

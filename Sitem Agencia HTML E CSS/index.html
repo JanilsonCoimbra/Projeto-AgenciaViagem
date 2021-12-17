@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="Stylesheet" href="css/style.css">
+    <link rel="Stylesheet" href="css/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div>
+                <img class="logo" src="img/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Destinos.html">Destinos</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+                <li style="cursor: pointer;" onclick="logar()">Adm</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="tela">
+            <img class="img" src="img/img carrosel/chapadaDiamantina.png" alt="">
+            <img class="img" src="img/img carrosel/morroSaoPaulo.png" alt="">
+            <img class="img" src="img/img carrosel/promocao.png" alt="">
+            <img class="img" src="img/img carrosel/farolBarra.png" alt="">
+            
+            <div class="rodape">
+                <a onclick="slide(0)"> <div class="opcao">1</div></a>
+                <a onclick="slide(1)"> <div class="opcao">2</div></a>
+                <a onclick="slide(2)"><div class="opcao">3</div></a>
+                <a onclick="slide(3)"> <div class="opcao">4</div></a>
+                <a href="https://api.whatsapp.com/send?phone=5571985011600" target="_brank"><img class="opcao" src="img/WhatsApp.svg.png" alt=""></a>
+            </div>
+        </div>
+    </main>
+    <section class="locais">
+        <img src="img/banner.png" alt="">
+        <div class="secaoLocais">
+            <div class="flex_conteudo">
+                <!--CARD INICIO-->
+                <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+                   <!--CARD INICIO-->
+                   <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+                   <!--CARD INICIO-->
+                   <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+                   <!--CARD INICIO-->
+                   <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+                   <!--CARD INICIO-->
+                   <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+                   <!--CARD INICIO-->
+                   <section class="section-card">
+                    <h2>São Paulo</h2>
+                    <div class="conteudo_card">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum possimus dolores aliquam,
+                            modi
+                            laudantium accusantium alias non nulla beatae quidem repellendus, corporis neque illo animi?
+                            Soluta
+                            eos eum quod?</p>
+                    </div>
+                    <span>R$ 2.000,00</span>
+                    <button onclick="modal()">Viajar</button>
+                </section>
+        </div>
+    </section>
+    <div class="modal-body">
+        <span class="material-icons fechar-modal" onclick="modal()"> cancel</span>
+        <div class="modal-modal">
+            <h2>Modal</h2>
+            <h2>Conteudo</h2>
+            <p>Para ativar esse modal deve definir modal-body display flex</p>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

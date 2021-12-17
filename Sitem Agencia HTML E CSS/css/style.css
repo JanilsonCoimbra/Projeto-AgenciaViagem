@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    text-decoration: none;
+}
+#header{
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    z-index: 4;
+    position: absolute;
+
+
+}
+.logo{
+    width: 150px;
+    margin: 2px 2px 2px 30px;
+}
+#header > nav{
+    width: 100%;
+    background-color: #E65901;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 1px 5px 1px;
+   z-index: 2;
+   margin-bottom: 200px;
+}
+#header li > a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#header > nav > ul{
+    display: flex;
+
+}
+nav > ul > li{
+    padding: 15px;
+    list-style: none;
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+li:hover{
+    background-color: #ff924f;
+    border-radius: 20px;
+}
+#header > section{
+    width: 100%;
+    height: 430px;
+    background-color: #fd8337;
+    display: none;
+    overflow-x: scroll;
+    scrollbar-color: orange;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #ff924f;
+    
+}
+     .flex_conteudo{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+     .modal-body{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 192, 133, 0.849);
+        z-index: 4;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    
+        flex-direction: column;
+    }
+    .modal-modal{
+        width: 80%;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.808);
+    }
+    .modal-modal > form{
+        width: 400px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .modal-modal>form>input{
+        display: block;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .fechar-modal{
+        font-size: 60px;
+        color: red;
+    }
+    .rodape img {
+        width: 50px;
+        height: 50px;
+    }
+    footer{
+        width: 100%;
+        height: 500px;
+    }

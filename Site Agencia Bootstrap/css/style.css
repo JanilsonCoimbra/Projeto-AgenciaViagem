@@ -1,0 +1,35 @@
+:root{
+    --cor-marron: #611a00;
+}
+
+.cor-navbar{
+    background-color: var(--cor-marron) !important;
+    z-index: 2;
+}
+.logo{
+    width: 150px;
+}
+.nav-item > .nav-link{
+    font-size: 20px;
+    color: white !important;
+}
+.form-contatos{
+    height: 350px;
+
+}
+.form-contatos textarea{
+    height: 50px;
+}
+.carousel{
+    height: 500px;   
+
+}
+.carousel-item img{
+    height: 500px;
+}
+.carrouselbtn{
+    height: 50px;
+}
+.cards-section{
+    height: 100px;
+}

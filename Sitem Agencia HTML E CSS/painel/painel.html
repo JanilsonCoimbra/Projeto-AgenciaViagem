@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="painel.css">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <header class="container-header" >
+        <a href="../index.html"><img src="img/logo.png" alt=""></a>
+        <button class="btn" onclick="pagina1()">Vender</button>
+        <button class="btn" onclick="pagina2()">Clientes</button>
+        <button class="btn" onclick="pagina3()">Destinos</button>
+        <button class="btn" onclick="pagina4()">Promoções</button>
+        <button class="btn" onclick="pagina5()">Documentação</button>
+    </header>
+    <main class="container-main">
+        <Object class="border-dark align-self-end w-100" type="text/html" data="pagina1.html"></Object>
+    </main>
+
+    <script>
+        let btn1 = document.querySelector(".text-primary");
+        let sessao = document.querySelector("Object");
+
+        function pagina1() {
+            sessao.setAttribute("data", "pagina1.html")
+        }
+
+        function pagina2() {
+            sessao.setAttribute("data", "pagina2.html")
+        }
+        function pagina3() {
+            sessao.setAttribute("data", "pagina3.html")
+        }
+        function pagina4() {
+            sessao.setAttribute("data", "pagina4.html")
+        }
+        function pagina5() {
+            sessao.setAttribute("data", "pagina5.html")
+        }
+    </script>
+</body>
+
+</html>

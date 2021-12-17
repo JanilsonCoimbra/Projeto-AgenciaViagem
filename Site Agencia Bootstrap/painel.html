@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid p-0 row d-flex p-3">
+    <header class=" col-3 vh-100">
+        <img src="img/logo.png" alt="Logo do Turista" class="col-12">
+        <nav class="navbar navbar-dark container-fluid">
+            <button class="navbar-toggler bg-danger container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-fluid">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+
+        <div class="collapsed" id="navbarToggleExternalContent">    
+            <div class="bg-white col-12">
+                
+              <button class="btn btn-primary text-white col-12 m-1" onclick="pagina1()">Vender</button>
+              <button class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Clientes</button>
+              <button class="btn btn-info text-white text-decoration-none col-12 m-1" onclick="pagina2()">Destinos</button>
+              <button class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Promoções</button>
+              <button class="btn btn-info text-dark col-12 m-1" onclick="pagina2()">Documentação</button>
+      
+            </div>
+          </div>
+
+
+    </header>
+    <main class="col-9 d-flex flex-column vh-100 mt-5 border border-1">
+        <Object class="border-dark align-self-end w-100" type="text/html"
+            data="/pagina1.html"></Object>
+    </main>
+
+    <script>
+        let btn1 = document.querySelector(".text-primary");
+        let sessao = document.querySelector("Object");
+
+        function pagina1() {
+            sessao.setAttribute("data", "/pagina1.html")
+        }
+
+        function pagina2() {
+            sessao.setAttribute("data", "/pagina2.html")
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,58 +1,152 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using SiteAgencia.Models;
 
 namespace SiteAgencia.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly Conectar _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(Conectar context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        // GET: Home
+        public async Task<IActionResult> Index()
         {
-            
-            ViewBag.Title = "Turista - Viaje hoje!";
+            return View(await _context.Destino.ToListAsync());
+        }
+
+        // GET: Home/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var destinos = await _context.Destino
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (destinos == null)
+            {
+                return NotFound();
+            }
+
+            return View(destinos);
+        }
+
+        // GET: Home/Create
+        public IActionResult Create()
+        {
             return View();
         }
-        
-        public IActionResult Destino()
+
+        // POST: Home/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Destino,Descricao,Valor")] Destinos destinos)
         {
-            ViewBag.Title = "Turista - Destino";
-            var list = new List<string>(); 
-            list.Add("Sao paulo");
-            list.Add("Rio de Janeiro");
-            list.Add("Alagoas");
-            list.Add("Marceio");
-            list.Add("Bahia");
-            list.Add("Sergipe");
-            ViewBag.Destinos = list;
-            return View();
+            if (ModelState.IsValid)
+            {
+                _context.Add(destinos);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(destinos);
         }
-          public IActionResult Promocoes()
+
+        // GET: Home/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            ViewBag.Title = "Turista - Promoções";
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var destinos = await _context.Destino.FindAsync(id);
+            if (destinos == null)
+            {
+                return NotFound();
+            }
+            return View(destinos);
         }
-            public IActionResult Contatos()
+
+        // POST: Home/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Destino,Descricao,Valor")] Destinos destinos)
         {
-            ViewBag.Title = "Turista - Contatos";
-            return View();
+            if (id != destinos.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(destinos);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!DestinosExists(destinos.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(destinos);
         }
-        
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+
+        // GET: Home/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var destinos = await _context.Destino
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (destinos == null)
+            {
+                return NotFound();
+            }
+
+            return View(destinos);
+        }
+
+        // POST: Home/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var destinos = await _context.Destino.FindAsync(id);
+            _context.Destino.Remove(destinos);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool DestinosExists(int id)
+        {
+            return _context.Destino.Any(e => e.Id == id);
         }
     }
 }
