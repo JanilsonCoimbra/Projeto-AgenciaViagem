@@ -9,22 +9,22 @@ using SiteAgencia.Models;
 
 namespace SiteAgencia.Controllers
 {
-    public class ContatosController : Controller
+    public class MensagensController : Controller
     {
         private readonly Conectar _context;
 
-        public ContatosController(Conectar context)
+        public MensagensController(Conectar context)
         {
             _context = context;
         }
 
-        // GET: Contatos
+        // GET: Mensagens
         public async Task<IActionResult> Index()
         {
             return View(await _context.Contato.ToListAsync());
         }
 
-        // GET: Contatos/Details/5
+        // GET: Mensagens/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,13 +42,13 @@ namespace SiteAgencia.Controllers
             return View(contato);
         }
 
-        // GET: Contatos/Create
+        // GET: Mensagens/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Contatos/Create
+        // POST: Mensagens/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,15 +59,28 @@ namespace SiteAgencia.Controllers
             {
                 _context.Add(contato);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Index));
             }
             return View(contato);
         }
 
-        // GET: Contatos/Edit/5
+        // GET: Mensagens/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var contato = await _context.Contato.FindAsync(id);
+            if (contato == null)
+            {
+                return NotFound();
+            }
+            return View(contato);
+        }
 
-        // POST: Contatos/Edit/5
+        // POST: Mensagens/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -102,7 +115,7 @@ namespace SiteAgencia.Controllers
             return View(contato);
         }
 
-        // GET: Contatos/Delete/5
+        // GET: Mensagens/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -120,7 +133,7 @@ namespace SiteAgencia.Controllers
             return View(contato);
         }
 
-        // POST: Contatos/Delete/5
+        // POST: Mensagens/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

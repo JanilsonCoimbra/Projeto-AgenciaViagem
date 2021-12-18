@@ -4,7 +4,9 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <h1>Create</h1>
+
 <h4>Contato</h4>
 <hr />
 <div class="row">
@@ -18,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Mesagem" class="control-label"></label>
-                <input asp-for="Mesagem" class="form-control" />
+                <textarea asp-for="Mesagem" class="form-control"></textarea>
                 <span asp-validation-for="Mesagem" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -28,7 +30,5 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
-</div>
+
 

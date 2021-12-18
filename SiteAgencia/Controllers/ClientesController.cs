@@ -9,22 +9,22 @@ using SiteAgencia.Models;
 
 namespace SiteAgencia.Controllers
 {
-    public class ContatosController : Controller
+    public class ClientesController : Controller
     {
         private readonly Conectar _context;
 
-        public ContatosController(Conectar context)
+        public ClientesController(Conectar context)
         {
             _context = context;
         }
 
-        // GET: Contatos
+        // GET: Clientes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Contato.ToListAsync());
+            return View(await _context.Cliente.ToListAsync());
         }
 
-        // GET: Contatos/Details/5
+        // GET: Clientes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,49 +32,62 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var contato = await _context.Contato
+            var cliente = await _context.Cliente
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contato == null)
+            if (cliente == null)
             {
                 return NotFound();
             }
 
-            return View(contato);
+            return View(cliente);
         }
 
-        // GET: Contatos/Create
+        // GET: Clientes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Contatos/Create
+        // POST: Clientes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Email,Mesagem")] Contato contato)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Cpf,Senha")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(contato);
+                _context.Add(cliente);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Index));
             }
-            return View(contato);
+            return View(cliente);
         }
 
-        // GET: Contatos/Edit/5
+        // GET: Clientes/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var cliente = await _context.Cliente.FindAsync(id);
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+            return View(cliente);
+        }
 
-        // POST: Contatos/Edit/5
+        // POST: Clientes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Mesagem")] Contato contato)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Cpf,Senha")] Cliente cliente)
         {
-            if (id != contato.Id)
+            if (id != cliente.Id)
             {
                 return NotFound();
             }
@@ -83,12 +96,12 @@ namespace SiteAgencia.Controllers
             {
                 try
                 {
-                    _context.Update(contato);
+                    _context.Update(cliente);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ContatoExists(contato.Id))
+                    if (!ClienteExists(cliente.Id))
                     {
                         return NotFound();
                     }
@@ -99,10 +112,10 @@ namespace SiteAgencia.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(contato);
+            return View(cliente);
         }
 
-        // GET: Contatos/Delete/5
+        // GET: Clientes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -110,30 +123,30 @@ namespace SiteAgencia.Controllers
                 return NotFound();
             }
 
-            var contato = await _context.Contato
+            var cliente = await _context.Cliente
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contato == null)
+            if (cliente == null)
             {
                 return NotFound();
             }
 
-            return View(contato);
+            return View(cliente);
         }
 
-        // POST: Contatos/Delete/5
+        // POST: Clientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var contato = await _context.Contato.FindAsync(id);
-            _context.Contato.Remove(contato);
+            var cliente = await _context.Cliente.FindAsync(id);
+            _context.Cliente.Remove(cliente);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ContatoExists(int id)
+        private bool ClienteExists(int id)
         {
-            return _context.Contato.Any(e => e.Id == id);
+            return _context.Cliente.Any(e => e.Id == id);
         }
     }
 }

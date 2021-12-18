@@ -1,17 +1,12 @@
 ﻿@model IEnumerable<SiteAgencia.Models.Destinos>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Destinos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
-<p>
-    <button asp-action="Create" class="btn btn-primary text-white text-decoration-none">
-        NOVA VENDA
-    </button>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -38,11 +33,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
