@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<SiteAgencia.Models.Destinos>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de destinos cadastrados";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-success " asp-action="Create">Criar novo destino</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>

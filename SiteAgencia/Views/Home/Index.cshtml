@@ -51,7 +51,7 @@
                 </div>
                 <!-- Button trigger modal -->
                 <a class="btn m-2 btn-light w-50" asp-action="Details" asp-route-id="@item.Id"> Continuar Lendo</a>
-                <button type="button" class="btn btn-success w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Viajar</button>
+                <a href="https://api.whatsapp.com/send?phone=5571985011600&text=Quero%20viajar%20para%20@{@item.Destino}" target="_brank" class="btn btn-success w-50">Viajar</a>
             </section>
         </section>
         <!--Card de viagens FINAL-->

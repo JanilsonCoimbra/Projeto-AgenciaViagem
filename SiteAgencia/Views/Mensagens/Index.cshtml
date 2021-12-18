@@ -7,7 +7,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -22,10 +22,12 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            
             <td>
-                <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Email)</a>
-</td>
+              <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Email)</a>
+            </td>
             <td>
+            
                 @Html.DisplayFor(modelItem => item.Mesagem)
             </td>
             <td>

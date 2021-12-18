@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\SiteAgencia.csproj",
+  "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\SiteAgencia.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,53 +15619,143 @@
   "RootNamespace": "SiteAgencia",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Home\\Promocoes.cshtml",
-      "TargetPath": "Views\\Home\\Promocoes.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Viagens\\Index.cshtml",
+      "TargetPath": "Views\\Viagens\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Viagens\\Create.cshtml",
+      "TargetPath": "Views\\Viagens\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Vendas\\Details.cshtml",
+      "TargetPath": "Views\\Vendas\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Clientes\\Details.cshtml",
+      "TargetPath": "Views\\Clientes\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Clientes\\Delete.cshtml",
+      "TargetPath": "Views\\Clientes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Clientes\\Edit.cshtml",
+      "TargetPath": "Views\\Clientes\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Viagens\\Edit.cshtml",
+      "TargetPath": "Views\\Viagens\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Viagens\\Details.cshtml",
+      "TargetPath": "Views\\Viagens\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Mensagens\\Index.cshtml",
+      "TargetPath": "Views\\Mensagens\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Vendas\\Create.cshtml",
+      "TargetPath": "Views\\Vendas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Clientes\\Create.cshtml",
+      "TargetPath": "Views\\Clientes\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Viagens\\Delete.cshtml",
+      "TargetPath": "Views\\Viagens\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Destinos\\Index.cshtml",
+      "TargetPath": "Views\\Destinos\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Vendas\\Delete.cshtml",
+      "TargetPath": "Views\\Vendas\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Mensagens\\Delete.cshtml",
+      "TargetPath": "Views\\Mensagens\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Mensagens\\Details.cshtml",
+      "TargetPath": "Views\\Mensagens\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Vendas\\Edit.cshtml",
+      "TargetPath": "Views\\Vendas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Shared\\_LayoutCliente.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutCliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Home\\Details.cshtml",
+      "TargetPath": "Views\\Home\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Home\\Index copy 3.cshtml",
-      "TargetPath": "Views\\Home\\Index copy 3.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Home\\Destino.cshtml",
-      "TargetPath": "Views\\Home\\Destino.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Contatos\\Create.cshtml",
+      "TargetPath": "Views\\Contatos\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\SiteAgencia\\Views\\Home\\Contatos.cshtml",
-      "TargetPath": "Views\\Home\\Contatos.cshtml",
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Clientes\\Index.cshtml",
+      "TargetPath": "Views\\Clientes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Vendas\\Index.cshtml",
+      "TargetPath": "Views\\Vendas\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     }
   ],
