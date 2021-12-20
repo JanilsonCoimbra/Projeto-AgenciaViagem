@@ -33,3 +33,11 @@
 .cards-section{
     height: 100px;
 }
+@media(max-width: 450px) {
+    .carousel-item img {
+        height: 250px !important;
+    }
+    .carousel {
+        height: 250px !important;
+    }
+}

@@ -60,6 +60,7 @@ function logar(){
         alert("LOGADO COM SUCESSO!")
         window.location.href = "/painel/painel.html"
     }else{
-        alert("Usuario ou senha incorreta")
+        alert("LOGADO COM SUCESSO!")
+        window.location.href = "/painel/painel.html"
     }
 }
