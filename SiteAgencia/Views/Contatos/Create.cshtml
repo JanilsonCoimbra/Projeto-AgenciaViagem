@@ -4,31 +4,30 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Create</h1>
-
-<h4>Contato</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mesagem" class="control-label"></label>
-                <textarea asp-for="Mesagem" class="form-control"></textarea>
-                <span asp-validation-for="Mesagem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<main class="container">
+    <div class="row d-flex justify-content-center text-center">
+         <h4>Contato</h4>
+        <hr class="w-50" />
+       <div class="row col-md-12 col-lg-12 d-flex justify-content-center">
+       
+            <form asp-action="Create" class="form-control w-50">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mesagem" class="control-label"></label>
+                    <textarea asp-for="Mesagem" class="form-control"></textarea>
+                    <span asp-validation-for="Mesagem" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-danger m-5" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
+</main>
 
 
