@@ -43,7 +43,7 @@ namespace SiteAgencia.Controllers
         }
 
         // GET: Home/Create
-        public IActionResult Create()
+        public IActionResult Promocoes()
         {
             return View();
         }

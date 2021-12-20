@@ -14,16 +14,16 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/img carrosel/chapadaDiamantina.png" class="d-block w-100" alt="...">
+                <img src="~/img/img carrosel/chapadaDiamantina.png" class="d-block w-100" alt="Chapada diamantina">
             </div>
             <div class="carousel-item">
-                <img src="img/img carrosel/farolBarra.png" class="d-block w-100" alt="...">
+                <img src="~/img/img carrosel/farolBarra.png" class="d-block w-100" alt="Farol da barra">
             </div>
             <div class="carousel-item">
-                <img src="img/img carrosel/morroSaoPaulo.png" class="d-block w-100" alt="...">
+                <img src="~/img/img carrosel/morroSaoPaulo.png" class="d-block w-100" alt="Morro de São paulo">
             </div>
             <div class="carousel-item">
-                <img src="img/img carrosel/promocao.png" class="d-block w-100" alt="...">
+               <a asp-controller="Home" asp-action="Promocoes"><img src="~/img/img carrosel/promocao.png" class="d-block w-100" alt="banner promocional"></a> 
             </div>
         </div>
         <a class="carrouselbtn carousel-control-prev bg-danger" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
@@ -40,9 +40,9 @@
         @foreach (var item in Model)
         {
             <!--Card de viagens-->
-            <section class="col-3 ">
+            <section class="col-3">
                 <section class="bg-white border border-2 m-1 d-flex flex-wrap align-items-center justify-content-center p-2 text-white">
-                    <h2 class="text-danger text-center w-100">@Html.DisplayFor(modelItem => item.Destino)</h2>
+                    <h2 class="text-danger text-center w-100 fs-4">@Html.DisplayFor(modelItem => item.Destino)</h2>
                     <div class="cards-section overflow-hidden">
                         <p class="bg-white p-2 text-dark text-center h-100">
                             @Html.DisplayFor(modelItem => item.Descricao)

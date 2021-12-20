@@ -23,11 +23,16 @@
                     <span asp-validation-for="Mesagem" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-danger m-5" />
+                    <input onclick="alerta()" type="submit" value="Enviar" class="btn btn-danger m-5" />
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        function alerta(){
+            alert("Enviando mensagem ao painel de controle do site");
+        }
+    </script>
 </main>
 
 

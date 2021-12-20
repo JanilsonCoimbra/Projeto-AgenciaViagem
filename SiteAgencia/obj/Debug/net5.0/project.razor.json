@@ -15734,6 +15734,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Home\\Promocoes.cshtml",
+      "TargetPath": "Views\\Home\\Promocoes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Japa\\Desktop\\Projeto Agencias\\Projeto-AgenciaViagem\\SiteAgencia\\Views\\Contatos\\Create.cshtml",
       "TargetPath": "Views\\Contatos\\Create.cshtml",
       "FileKind": "mvc"

@@ -5,36 +5,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Destino)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<main class="container d-flex flex-wrap mt-5 justify-content-center">
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Destino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-        </tr>
+     <!--Card de viagens-->
+            <section class="col-12 col-md-6 col-lg-3 mt-4">
+                <section class="bg-white border border-2 mt-1 d-flex flex-wrap align-items-center justify-content-center p-2 text-white h-100">
+                    <h2 class="text-danger text-center w-100">@Html.DisplayFor(modelItem => item.Destino)</h2>
+                    <div class="cards-section overflow-hidden h-50">
+                        <p class="bg-white p-2 text-dark text-center h-100 ">
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </p>
+                        <span> @Html.DisplayFor(modelItem => item.Valor)</span> 
+                    </div>
+                    <!-- Button trigger modal -->
+                    <a  href="https://api.whatsapp.com/send?phone=5571985011600&text=Quero%20viajar%20para%20@{@item.Destino}" target="_brank" class="btn btn-success w-50 m-5">Viajar</a>
+                </section>
+            </section>
+            <!--Card de viagens FINAL-->
 }
-    </tbody>
-</table>
+</main>

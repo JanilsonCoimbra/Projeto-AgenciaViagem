@@ -329,3 +329,4 @@ C:\Users\Japa\Desktop\Projeto Agencias\Projeto-AgenciaViagem\SiteAgencia\obj\Deb
 C:\Users\Japa\Desktop\Projeto Agencias\Projeto-AgenciaViagem\SiteAgencia\obj\Debug\net5.0\Razor\Views\Clientes\Edit.cshtml.g.cs
 C:\Users\Japa\Desktop\Projeto Agencias\Projeto-AgenciaViagem\SiteAgencia\obj\Debug\net5.0\Razor\Views\Clientes\Index.cshtml.g.cs
 C:\Users\Japa\Desktop\Projeto Agencias\Projeto-AgenciaViagem\SiteAgencia\obj\Debug\net5.0\Razor\Views\Contatos\Create.cshtml.g.cs
+C:\Users\Japa\Desktop\Projeto Agencias\Projeto-AgenciaViagem\SiteAgencia\obj\Debug\net5.0\Razor\Views\Home\Promocoes.cshtml.g.cs
