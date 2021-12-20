@@ -4,13 +4,13 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<main class="container">
-    <div class="row d-flex justify-content-center text-center">
+<main class="container border border-1">
+    <div class="row d-flex justify-content-center text-center mt-5">
          <h4>Contato</h4>
         <hr class="w-50" />
        <div class="row col-md-12 col-lg-12 d-flex justify-content-center">
        
-            <form asp-action="Create" class="form-control w-50">
+            <form asp-action="Create" class="form-control w-50 mb-5">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Email" class="control-label"></label>

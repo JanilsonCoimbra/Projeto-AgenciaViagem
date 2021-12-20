@@ -4,8 +4,8 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<main>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<main class="h-auto">
+    <div id="carouselExampleCaptions" class="carousel slide overflow-hidden" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
@@ -35,7 +35,7 @@
             <span class="visually-hidden">Next</span>
         </a>
     </div>
-    <section class="container-fluid vh-100 d-flex flex-wrap position-absolute">
+    <section class="container-fluid d-flex min-vh-100 flex-wrap">
 
         @foreach (var item in Model)
         {

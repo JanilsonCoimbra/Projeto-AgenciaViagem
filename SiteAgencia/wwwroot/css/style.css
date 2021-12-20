@@ -19,10 +19,9 @@
 .form-contatos {
     height: 350px;
 }
-
-    .form-contatos textarea {
-        height: 50px;
-    }
+.form-contatos textarea {
+    height: 50px;
+}
 
 .carousel {
     height: 500px;
