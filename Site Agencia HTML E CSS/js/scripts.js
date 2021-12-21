@@ -58,9 +58,9 @@ function logar(){
     if(usuario == "adm" && senha == "adm")
     {
         alert("LOGADO COM SUCESSO!")
-        window.location.href = "/painel/painel.html"
+        window.location.href = "./painel/painel.html"
     }else{
         alert("LOGADO COM SUCESSO!")
-        window.location.href = "/painel/painel.html"
+        window.location.href = "./painel/painel.html"
     }
 }

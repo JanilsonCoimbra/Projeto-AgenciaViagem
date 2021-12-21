@@ -26,10 +26,10 @@
 @foreach (var item in Model) {
         <tr>
             <td class="text-wrap">
-                @Html.DisplayFor(modelItem => item.cliente.Email)
+                @Html.DisplayFor(modelItem => item.cliente.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.destino.Id)
+                @Html.DisplayFor(modelItem => item.destino.Destino)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id"><span class="material-icons">edit_note</span></a>

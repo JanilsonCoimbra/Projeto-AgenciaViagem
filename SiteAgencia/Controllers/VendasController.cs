@@ -48,8 +48,8 @@ namespace SiteAgencia.Controllers
         // GET: Vendas/Create
         public IActionResult Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email");
-            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Id");
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Nome");
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace SiteAgencia.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email", compras.ClienteId);
-            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Id", compras.DestinoId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Nome", compras.ClienteId);
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino", compras.DestinoId);
             return View(compras);
         }
 
@@ -84,8 +84,8 @@ namespace SiteAgencia.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Email", compras.ClienteId);
-            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Id", compras.DestinoId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Nome", compras.ClienteId);
+            ViewData["DestinoId"] = new SelectList(_context.Destino, "Id", "Destino", compras.DestinoId);
             return View(compras);
         }
 
